@@ -85,11 +85,6 @@ st-pages==0.5.0
 stack-data==0.6.3
 streamlit==1.36.0
 tenacity==8.5.0
-tensorboard==2.16.2
-tensorboard-data-server==0.7.2
-tensorflow==2.16.2
-tensorflow-intel==2.16.2
-tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
 toml==0.10.2
