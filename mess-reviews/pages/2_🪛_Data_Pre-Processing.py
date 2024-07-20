@@ -20,7 +20,7 @@ p {
 st.title("🪛 Data Pre-Processing")
 
 
-mess = pd.read_csv("data/mess_data.csv")
+mess = pd.read_csv("./data/mess_data.csv")
 
 st.markdown("""
             # Data types and Calculating score

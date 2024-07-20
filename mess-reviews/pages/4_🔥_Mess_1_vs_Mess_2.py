@@ -17,7 +17,7 @@ p {
 
 st.title("🔥 Mess 1 vs Mess 2")
 
-mess = pd.read_csv("data/mess_data_processed.csv")
+mess = pd.read_csv("./data/mess_data_processed.csv")
 mess.date = pd.to_datetime(mess.date)
 
 st.markdown(

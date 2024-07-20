@@ -16,7 +16,7 @@ p {
 st.title("📝 Data Collection")
 
 
-mess = pd.read_csv("data/mess_data.csv")
+mess = pd.read_csv("./data/mess_data.csv")
 
 st.markdown("""
             # Sources

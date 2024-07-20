@@ -17,7 +17,7 @@ st.set_page_config(layout="wide",page_icon="😋",page_title="Mess Review Analys
 
 #st.title("Mess-tery Solved: The Ultimate Poll Results")
 
-food_bg = Image.open("images/food_final.png")
+food_bg = Image.open("./images/food_final.png")
 st.image(food_bg)
 
 st.markdown("""
