@@ -6,14 +6,14 @@ st.set_page_config(layout="wide")
 
 show_pages(
     [
-        Page("main.py","Mess Review Analysis",icon="😋"),
-        Page("pages/data_collection.py",icon="📝"),
-        Page("pages/data_pre-processing.py",icon="🪛"),
-        Page("pages/looking_at_the_numbers.py",icon="📈"),
-        Page("pages/mess_1_vs_mess_2.py",icon="🔥"),
-        Page("pages/mess-terpiece_timing.py",icon="⌚"),
-        Page("pages/outlier_analysis.py",icon="❓"),
-        Page("pages/miscellaneous.py",icon="🤔"),
+        Page("mess_review_analysis.py","Mess Review Analysis",icon="😋"),
+        Page("_pages/data_collection.py",icon="📝"),
+        Page("_pages/data_pre-processing.py",icon="🪛"),
+        Page("_pages/looking_at_the_numbers.py",icon="📈"),
+        Page("_pages/mess_1_vs_mess_2.py",icon="🔥"),
+        Page("_pages/mess-terpiece_timing.py",icon="⌚"),
+        Page("_pages/outlier_analysis.py",icon="❓"),
+        Page("_pages/miscellaneous.py",icon="🤔"),
     ]
 )
 
