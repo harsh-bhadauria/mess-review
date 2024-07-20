@@ -21,7 +21,7 @@ mess = pd.read_csv(Path(__file__).parents[1]/'data'/'mess_data_processed.csv')
 st.title("⌚ Mess-terpeice Timing")
 
 st.markdown("""
-            Ever wondered if your Monday morning blues are actually because of the mess breakfast? Or why Friday dinners always seem to taste a little better? In this section, we dive into the delicious details of how the day of the week and the meal time (breakfast, lunch, or dinner) play a role in deciding the mess food ratings. From the notorious Sunday brunches to the much-dreaded Thursday lunches, we'll uncover the patterns and peculiarities that make our taste buds dance—or revolt!
+            Ever wondered if those Monday morning blues are actually because of the mess breakfast? Or why Friday dinners always seem to taste a little better? In this section, we dive into the delicious details of how the day of the week and the meal time (breakfast, lunch, or dinner) play a role in deciding the mess food ratings.
             
             """,unsafe_allow_html=True)
 
@@ -55,11 +55,11 @@ with st.expander(label="Select an option to see its variation (in %) over time",
     st.plotly_chart(fig, use_container_width=True)
 
 st.markdown("""
-            - The highest score is taken by \*insert drumroll\* Sunday breakfasts! (Can you blame em? Those aloo parathas and dosas were so good. Well... relatively at least)
-            - Lunches have a consistently high score all across the board- even the worst lunch has ~1.5x the score of the worst dinner
-            - On the other hand, dinners have the lowest ratings overall.
-            - In fact, the lowest score is prominently taken by Saturday dinners, having the lowest %good and highest %poor ratings (people *really* didn't like those chilli potatoes)
-            - Tuesday and Sunday seem to have an unusually high amount of 5 star ratings, suggesting the presence of outliers
-            - Wednesday sees the highest number of votes per poll for all three meals combined
-            - Dinners get the highest number of votes per poll (people dont wake up early enough for breakfast, and there's usually classes before and/or after lunch)
+            - <p>The highest score is taken by <em>*insert drumroll*</em> Sunday breakfasts! (Can you blame em? Those aloo parathas and dosas were so good. Well... relatively at least)</p>
+            - <p>Lunches have a consistently high score all across the board- even the worst lunch has ~1.5x the score of the worst dinner</p>
+            - <p>On the other hand, dinners have the lowest ratings overall.</p>
+            - <p>In fact, the lowest score is prominently taken by Saturday dinners, having the lowest %good and highest %poor ratings (people *really* didn't like those chilli potatoes)</p>
+            - <p>Tuesday and Sunday seem to have an unusually high amount of 5 star ratings, suggesting the presence of outliers</p>
+            - <p>Wednesday sees the highest number of votes per poll for all three meals combined</p>
+            - <p>Dinners get the highest number of votes per poll (people dont wake up early enough for breakfast, and there's usually classes before and/or after lunch)</p>
             """,unsafe_allow_html=True)

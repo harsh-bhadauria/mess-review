@@ -24,7 +24,7 @@ mess = pd.read_csv(Path(__file__).parents[1]/'data'/'mess_data.csv')
 
 st.markdown("""
             # Data types and Calculating score
-            First we convert the object data type columns into their appropriate data type
+            Because we will be doing date comparisons and plotting many many graphs, it is important that we first convert the object data type columns into their appropriate data type
             """, unsafe_allow_html=True)
 
 st.code("""
@@ -38,14 +38,13 @@ mess.date = pd.to_datetime(mess.date)
 mess = mess.astype({"mess":'category',"day":'category',"meal":'category'})
 
 st.markdown("""
-            To compare between days need a metric which combines all the information about that day's ratings. So, we will add a 'score' feature, which will be a weighted average of other ratings. The weights are designated as follows:
+            Now we need a metric which condenses the poll results into a more digestible (ha, get it?)format. How about we add a star point rating system? We'll give each poll a rating out of five based on the ratings it received. More formally, we will add a 'score' feature, which will be a weighted average of other ratings. The weights are designated as follows:
             
-            - Excellent = 5
-            - Good = 4
-            - Okay = 3
-            - Poor = 1
+            - <p>Excellent = 5 stars    :D</p>
+            - <p>Good = 4 stars &ensp; :)</p>
+            - <p>Okay = 3 stars &ensp; :|</p>
+            - <p>Poor = 1 star &emsp; :(</p>
             
-            One can think of this as a ***"star" rating out of 5 system***
             """, unsafe_allow_html=True)
 
 st.code("""
