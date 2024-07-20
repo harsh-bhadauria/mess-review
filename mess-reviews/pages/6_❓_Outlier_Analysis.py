@@ -44,7 +44,7 @@ st.markdown("""
             
             ***The lunch of 10th April, 2024***
             
-            What on earth could possibly have been so bad in taste, that the entirety of the college set aside their differences and came together to give it the worst rating possible? There is not a single vote in any of the other categories, not a single one. And its not like there's only a couple votes on that poll, there's actually 85. Take a look for yourself-
+            What on earth could possibly have been so bad in taste, that the entirety of the college set aside their differences and came together to give it the worst rating possible? There is not a single vote in any of the other categories, not a single one. And its not like there's only a handful votes on that poll, there's 85. Take a look for yourself-
             """)
 image_path = Path(__file__).parents[1] / 'images' / '10th_april.png'
 food_bg = Image.open(image_path)

@@ -40,9 +40,9 @@ st.markdown("""
             # Quick Navigation
             - <p>Where did I get the data from? <a href = "https://mess-review.streamlit.app/Data_Collection" target='_self'>here</a></p>
             - <p>How did I calculate the overall score? <a href = "https://mess-review.streamlit.app/Data_Pre-Processing" target='_self'>here</a></p>
-            - <p>Want to dive straight into the numbers? <a href = "https://mess-review.streamlit.app/Looking_At_The_Numbers" target='_self'>here</a></p>
-            - <p>Impact of tender changes? <a href = "https://mess-review.streamlit.app/Looking_At_The_Numbers" target='_self'>here</a></p>
+            - <p>Impact of tender changes? <a href = "https://mess-review.streamlit.app/Mess_1_vs_Mess_2" target='_self'>here</a></p>
             - <p>Want a day and time analysis? <a href = "https://mess-review.streamlit.app/Looking_At_The_Numbers" target='_self'>here</a></p>
+            - <p>Want to directly jump to the conclusion? <a href = "https://mess-review.streamlit.app/Conclusion" target='_self'>why?</a></p>
             
             """,unsafe_allow_html=True)
 
