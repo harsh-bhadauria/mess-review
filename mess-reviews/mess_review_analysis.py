@@ -1,19 +1,20 @@
 import streamlit as st
-import st_pages
+from st_pages import Page as pg
+from st_pages import show_pages as shp
 from PIL import Image
 
 st.set_page_config(layout="wide")
 
-st_pages.show_pages(
+shp(
     [
-        st_pages.Page("mess_review_analysis.py","Mess Review Analysis",icon="😋"),
-        st_pages.Page("sidebar/data_collection.py",icon="📝"),
-        st_pages.Page("sidebar/data_pre-processing.py",icon="🪛"),
-        st_pages.Page("sidebar/looking_at_the_numbers.py",icon="📈"),
-        st_pages.Page("sidebar/mess_1_vs_mess_2.py",icon="🔥"),
-        st_pages.Page("sidebar/mess-terpiece_timing.py",icon="⌚"),
-        st_pages.Page("sidebar/outlier_analysis.py",icon="❓"),
-        st_pages.Page("sidebar/miscellaneous.py",icon="🤔"),
+        pg("mess_review_analysis.py","Mess Review Analysis",icon="😋"),
+        pg("sidebar/data_collection.py",icon="📝"),
+        pg("sidebar/data_pre-processing.py",icon="🪛"),
+        pg("sidebar/looking_at_the_numbers.py",icon="📈"),
+        pg("sidebar/mess_1_vs_mess_2.py",icon="🔥"),
+        pg("sidebar/mess-terpiece_timing.py",icon="⌚"),
+        pg("sidebar/outlier_analysis.py",icon="❓"),
+        pg("sidebar/miscellaneous.py",icon="🤔"),
     ]
 )
 
