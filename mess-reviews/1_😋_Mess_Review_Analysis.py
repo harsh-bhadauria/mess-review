@@ -18,9 +18,17 @@ st.set_page_config(layout="wide",page_icon="😋",page_title="Mess Review Analys
 
 #st.title("Mess-tery Solved: The Ultimate Poll Results")
 
-food_bg = Image.open(Path(__file__).parent/'food_final.png')
-#st.write(Path(__file__)/'mess_data.csv')
-st.image(food_bg)
+# food_bg = Image.open(Path(__file__).parent/'food_final.png')
+# #st.write(Path(__file__)/'mess_data.csv')
+# st.image(food_bg)
+
+image_path = Path(__file__).parent / 'food_final.png'
+st.write(f"Resolved path: {image_path}")
+if image_path.exists():
+    food_bg = Image.open(image_path)
+    st.image(food_bg, caption='Mess Review Analysis Background')
+else:
+    st.error(f"File not found: {image_path}")
 
 st.markdown("""
 <style>
