@@ -1,5 +1,4 @@
 import streamlit as st
-from st_pages import add_page_title
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -22,7 +21,9 @@ mess = pd.read_csv(Path(__file__).parents[1]/'data'/'mess_data_processed.csv')
 mess.date = pd.to_datetime(mess.date)
 
 st.markdown(
-    "Does it really make a difference if you're in mess 1 or mess2? Let's see what the data says!")
+    """
+     In this section, we'll compare the ratings of Mess 1 and Mess 2 to see which one reigns supreme! (To be fair this is a figure among ciphers situation but oh well) Did the tender change and introduction of non-veg items really make a huge impact on the overall quality of the food? Let's look at the data to find out.
+    """,unsafe_allow_html=True)
 
 st.title("Feature Comparison")
 with st.expander(label="Select an option to see its distribution", expanded=True):
@@ -35,7 +36,7 @@ with st.expander(label="Select an option to see its distribution", expanded=True
         marginal="box", 
         hover_data=mess.columns,
         barmode="overlay",
-        category_orders={"mess":[1,2]},
+        category_orders={"mess":[2,1]},
         color_discrete_map={1:"#b84b77",2:"#63e0d8"})
     st.plotly_chart(fig, use_container_width=True)
 
@@ -59,7 +60,7 @@ mess_1_polls,mess_2_polls""")
 st.write(mess_1_polls,mess_2_polls)
 
 st.header("Tender Changes")
-st.markdown("""From April 2024, a new tender was issued for the central mess and various stationary and grocery shops on the campus. Most importantly, non-veg items were now on the menu, being served in mess 2 ONLY (Previously, both mess had the same menu but served on alternate days). How did this affect the ratings?""",unsafe_allow_html=True)
+st.markdown("""From April 2024, a new tender was issued for the central mess and various stationary and grocery shops on the campus. Most importantly, non-veg items were now on the menu, being served in mess 2 ONLY (Previously, both mess had the same menu but served on alternate days). Will this drastic change have drastic consequences?""",unsafe_allow_html=True)
 
 mess['new_tender'] = (mess.date) < np.datetime64("2024-04-01")
 with st.expander(label="Select an option to see its variation (in %) over time", expanded=True):

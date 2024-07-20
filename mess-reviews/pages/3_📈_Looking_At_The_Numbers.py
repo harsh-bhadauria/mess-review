@@ -21,7 +21,8 @@ st.title("📈 Looking at the Numbers")
 mess = pd.read_csv(Path(__file__).parents[1]/'data'/'mess_data_processed.csv')
 
 st.markdown("""
-            First lets look at some basic statistics to answer questions like how many people, on average, thought the food was good? What is the standard deviation of it?
+            Before we dive into the delicious details of specific comparisons, let's take a step back and look at the bigger picture. In this section, we'll explore the general statistics and time series trends that shape our mess hall experiences. Think of it as the appetizer before the main course—an overview that sets the stage for the culinary insights to come.
+            
             *(Remember we converted the ratings into percentages!)*""",unsafe_allow_html=True)
 st.code("mess.describe(include=[float])")
 mess.date = pd.to_datetime(mess.date)

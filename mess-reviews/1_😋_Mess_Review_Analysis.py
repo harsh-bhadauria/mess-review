@@ -35,8 +35,8 @@ p {
 """, unsafe_allow_html=True)
 
 st.markdown("""
-            # Overview
-            <p>Mess is a crucial aspect of college life, significantly impacting student satisfaction and well-being. To better understand this, I'm conducting a <em><b>mess review analysis</b></em> using data collected from polls conducted by the mess committee of IIITDMJ itself. The aim of this analysis to gain some interesting insights and discover patterns that can help improve the overall dining experience.</p>
+            # Introduction
+            <p>Welcome to the ultimate deep dive into our college dining experience— analyzing the mess reviews like never before! I’m conducting an in-depth mess review analysis using data collected by our very own college’s mess committee. From dissecting daily ratings to uncovering trends over time, this project aims to analyse the ups and downs of our mess dining experience. From basic stats and time series trends to head-to-head mess hall showdowns, there's something in here for everyone. Bon Appétit!</p>
             
             ---
             # Expectations
@@ -50,7 +50,7 @@ st.markdown("""
             
             ---
             # Motivation
-            <p>For this project, I wanted to work on some dataset that was actually relevant to me and our college community, and not some random house price prediction dataset off off kaggle. After <del>a lot of</del> some brainstorming, I stumbled across polls that were conducted by the mess committee on WhatsApp (just goes to show that data is <em>everywhere</em> around you, you just have to look for it 🙂) and decided that this would be an interesting topic for analysis.</p>
+            <p>For this project, I wanted to focus on a dataset that's relevant to me and for our college community. Instead of analyzing a random dataset from the internet, I wanted to engage with something that reflects our daily experiences and offers actionable insights. After <del>a lot of</del> some brainstorming, I stumbled across polls that were conducted by the mess committee on WhatsApp (just goes to show that data is <em>everywhere</em> around you, you just have to look for it 🙂) and decided that this would be an interesting topic for analysis.</p>
             
             ---
             # Quick Navigation
@@ -61,3 +61,5 @@ st.markdown("""
             - <p>What was the impact of tender changes (if any)?</p>
             
             """,unsafe_allow_html=True)
+
+# I wanted to focus on a dataset that’s personally relevant and impactful for our community. Instead of analyzing a random dataset from the internet, I wanted to engage with something that reflects our daily experiences and offers actionable insights.
