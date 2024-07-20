@@ -6,10 +6,8 @@ import plotly.express as px
 import plotly.figure_factory as ff
 from sklearn.preprocessing import RobustScaler
 
-st.set_page_config(layout="wide")
-add_page_title()
 
-mess = pd.read_csv("data/mess_data.csv")
+st.set_page_config(layout="wide",page_icon="🪛",page_title="Data Pre-Processing")
 
 st.markdown("""
 <style>
@@ -18,6 +16,11 @@ p {
 }
 </style>
 """, unsafe_allow_html=True)
+
+st.title("🪛 Data Pre-Processing")
+
+
+mess = pd.read_csv("data/mess_data.csv")
 
 st.markdown("""
             # Data types and Calculating score

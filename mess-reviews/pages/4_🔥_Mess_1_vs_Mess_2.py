@@ -5,7 +5,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",page_icon="🔥",page_title="Mess 1 vs Mess 2")
+
 st.markdown("""
 <style>
 p {
@@ -14,7 +15,7 @@ p {
 </style>
 """, unsafe_allow_html=True)
 
-add_page_title()
+st.title("🔥 Mess 1 vs Mess 2")
 
 mess = pd.read_csv("data/mess_data_processed.csv")
 mess.date = pd.to_datetime(mess.date)
@@ -62,7 +63,7 @@ st.markdown("""From April 2024, a new tender was issued for the central mess and
 mess['new_tender'] = (mess.date) < np.datetime64("2024-04-01")
 with st.expander(label="Select an option to see its variation (in %) over time", expanded=True):
     feature = st.selectbox(
-        label=" ", options=['excellent', 'good', 'okay', 'poor','score',])
+        label=" ", options=['excellent', 'good', 'okay', 'poor','score','votes'])
     
     fig = px.histogram(mess,x="mess",y=f"{feature}",color="new_tender",barmode="group",histfunc='avg')
     st.plotly_chart(fig, use_container_width=True)

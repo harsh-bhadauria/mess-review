@@ -1,20 +1,19 @@
 import streamlit as st
-from st_pages import Page as pg
-from st_pages import show_pages as shp
 from PIL import Image
 
-shp(
-    [
-        pg("mess_review_analysis.py","Mess Review Analysis",icon="😋"),
-        pg("sidebar/data_collection.py",icon="📝"),
-        pg("sidebar/data_pre-processing.py",icon="🪛"),
-        pg("sidebar/looking_at_the_numbers.py",icon="📈"),
-        pg("sidebar/mess_1_vs_mess_2.py",icon="🔥"),
-        pg("sidebar/mess-terpiece_timing.py",icon="⌚"),
-        pg("sidebar/outlier_analysis.py",icon="❓"),
-        pg("sidebar/miscellaneous.py",icon="🤔"),
-    ]
-)
+# shp(
+#     [
+#         pg("mess_review_analysis.py","Mess Review Analysis",icon="😋"),
+#         pg("sidebar/data_collection.py",icon="📝"),
+#         pg("sidebar/data_pre-processing.py",icon="🪛"),
+#         pg("sidebar/looking_at_the_numbers.py",icon="📈"),
+#         pg("sidebar/mess_1_vs_mess_2.py",icon="🔥"),
+#         pg("sidebar/mess-terpiece_timing.py",icon="⌚"),
+#         pg("sidebar/outlier_analysis.py",icon="❓"),
+#         pg("sidebar/miscellaneous.py",icon="🤔"),
+#     ]
+# )
+st.set_page_config(layout="wide",page_icon="😋",page_title="Mess Review Analysis")
 
 #st.title("Mess-tery Solved: The Ultimate Poll Results")
 
@@ -56,5 +55,3 @@ st.markdown("""
             - <p>What was the impact of tender changes (if any)?</p>
             
             """,unsafe_allow_html=True)
-
-st.experimental_rerun()

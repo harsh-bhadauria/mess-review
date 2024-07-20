@@ -2,10 +2,7 @@ import streamlit as st
 from st_pages import add_page_title
 import pandas as pd
 
-st.set_page_config(layout="wide")
-
-mess = pd.read_csv("data/mess_data.csv")
-add_page_title()
+st.set_page_config(layout="wide",page_icon="📝",page_title="Data Collection")
 
 st.markdown("""
 <style>
@@ -14,6 +11,12 @@ p {
 }
 </style>
 """, unsafe_allow_html=True)
+
+
+st.title("📝 Data Collection")
+
+
+mess = pd.read_csv("data/mess_data.csv")
 
 st.markdown("""
             # Sources

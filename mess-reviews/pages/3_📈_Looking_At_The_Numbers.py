@@ -4,7 +4,8 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",page_icon="📈",page_title="Looking at the Numbers")
+
 st.markdown("""
 <style>
 p {
@@ -13,7 +14,7 @@ p {
 </style>
 """, unsafe_allow_html=True)
 
-add_page_title()
+st.title("📈 Looking at the Numbers")
 
 mess = pd.read_csv("data/mess_data_processed.csv")
 
