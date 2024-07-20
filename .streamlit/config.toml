@@ -7,6 +7,3 @@ textColor="#f8f8f2"
 [server]
 enableCORS = false
 enableXsrfProtection = false
-
-[server.staticDirs]
-assets = "mess-reviews/images"
