@@ -3,8 +3,6 @@ from st_pages import Page as pg
 from st_pages import show_pages as shp
 from PIL import Image
 
-st.set_page_config(layout="wide")
-
 shp(
     [
         pg("mess_review_analysis.py","Mess Review Analysis",icon="😋"),
@@ -58,3 +56,5 @@ st.markdown("""
             - <p>What was the impact of tender changes (if any)?</p>
             
             """,unsafe_allow_html=True)
+
+st.experimental_rerun()
