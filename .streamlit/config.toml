@@ -3,3 +3,13 @@ primaryColor="#5681d0"
 backgroundColor="#212750"
 secondaryBackgroundColor="#1a1a3d"
 textColor="#f8f8f2"
+
+[server]
+enableCORS = false
+enableXsrfProtection = false
+
+[server.fileWatcherType]
+server.headless = true
+
+[server.staticDirs]
+assets = "mess-reviews/images"
