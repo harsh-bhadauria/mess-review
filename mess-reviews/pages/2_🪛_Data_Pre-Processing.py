@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
 from sklearn.preprocessing import RobustScaler
-
+from pathlib import Path
 
 st.set_page_config(layout="wide",page_icon="🪛",page_title="Data Pre-Processing")
 
@@ -20,7 +20,7 @@ p {
 st.title("🪛 Data Pre-Processing")
 
 
-mess = pd.read_csv("./data/mess_data.csv")
+mess = pd.read_csv(Path(__file__).parents[1]/'data'/'mess_data.csv')
 
 st.markdown("""
             # Data types and Calculating score
@@ -110,6 +110,6 @@ mess['good'] *= 100/total
 mess['okay'] *= 100/total
 mess['poor'] *= 100/total
 
-mess.to_csv("data/mess_data_processed.csv", index=False)
+mess.to_csv(Path(__file__).parents[1]/'data'/'mess_data_processed.csv', index=False)
 
 

@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+from pathlib import Path
 
 # shp(
 #     [
@@ -17,7 +18,8 @@ st.set_page_config(layout="wide",page_icon="😋",page_title="Mess Review Analys
 
 #st.title("Mess-tery Solved: The Ultimate Poll Results")
 
-food_bg = Image.open("./images/food_final.png")
+food_bg = Image.open(Path(__file__).parent/'images'/'food_final.png')
+#st.write(Path(__file__)/'mess_data.csv')
 st.image(food_bg)
 
 st.markdown("""

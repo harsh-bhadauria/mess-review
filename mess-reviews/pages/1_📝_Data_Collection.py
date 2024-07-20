@@ -1,6 +1,7 @@
 import streamlit as st
 from st_pages import add_page_title
 import pandas as pd
+from pathlib import Path
 
 st.set_page_config(layout="wide",page_icon="📝",page_title="Data Collection")
 
@@ -16,7 +17,7 @@ p {
 st.title("📝 Data Collection")
 
 
-mess = pd.read_csv("./data/mess_data.csv")
+mess = pd.read_csv(Path(__file__).parents[1]/'data'/'mess_data.csv')
 
 st.markdown("""
             # Sources

@@ -3,6 +3,8 @@ from st_pages import add_page_title
 import numpy as np
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
+
 
 st.set_page_config(layout="wide",page_icon="📈",page_title="Looking at the Numbers")
 
@@ -16,7 +18,7 @@ p {
 
 st.title("📈 Looking at the Numbers")
 
-mess = pd.read_csv("./data/mess_data_processed.csv")
+mess = pd.read_csv(Path(__file__).parents[1]/'data'/'mess_data_processed.csv')
 
 st.markdown("""
             First lets look at some basic statistics to answer questions like how many people, on average, thought the food was good? What is the standard deviation of it?
