@@ -1,10 +1,4 @@
 import streamlit as st
-import streamlit as st
-import numpy as np
-import pandas as pd
-import plotly.express as px
-import plotly.figure_factory as ff
-from pathlib import Path
 
 st.set_page_config(layout="wide",page_icon="💡",page_title="Conclusion")
 
@@ -15,8 +9,6 @@ p {
 }
 </style>
 """, unsafe_allow_html=True)
-
-mess = pd.read_csv(Path(__file__).parents[1]/'data'/'mess_data_processed.csv')
 
 st.title("💡 Conclusion")
 
@@ -30,11 +22,8 @@ st.markdown("""
             
             The new tender may not have had the drastic impact we thought it would, but it was a step in the right direction. The increased poll frequency is a step in the right direction. Perhaps this project is a step in the right direction. And if there's anything that I've learned from Gradient Boost, its that taking tiny steps in the right direction will eventually lead you to your desired destination.
             
+            ---
+            Shoutout to [[Summer of ML]]! 🙇‍♂️
+            
+            A mess-ive thanks to the mess committee for conducting these polls, you guys are awesome. 💖
             """,unsafe_allow_html=True)
-
-# This review analysis of the mess has been useful in taking a detailed look into the dining experiences that are served within our college. We broke down how the day of the week and meal times influenced our rating, revealing some strong trends for days/meal times that consistently fared worse or better. We have also compared Mess 1 against Mess 2 in the hope of seeing whether the tender changes will bring about any changes. We have also looked at outliers to shed some light on those exceptional days when ratings were very high or low, in search of clues about what works and does not work with our mess.
-# At least the insights learned from this analysis are useful. This project is not intended to point out what's wrong; it's to work out how to fix it. Maybe zeroing in on trouble spots and time out to celebrate things we're doing right could go hand-in-hand. These patterns can help us make decisions that will have an improved overall mess experience.
-# The better mess experience is a joint journey. It consists of student feedback, mess staff adjustments, and an active mess committee.
-# Although the current ratings do not picture any of the high standards we believe we should be rated, they still provide us with a baseline for further improvement.
-
-# The new tender was not quite as drastically directive as we would have hoped, but it was in the right direction.            Increasing the poll frequency at least sounds like it's a step in the right direction. Perhaps this project is a step in the right direction. And if there's anything I've taken away from Gradient Boost, it's that taking small steps in the right direction will get you there. 

@@ -35,25 +35,27 @@ st.markdown("""
             - <p>The median for score is ~2.27, which is basically 2 stars or 'below average'</p>
             - <p>Around a third of the people give an 'okay' rating (3 stars)</p>
             - <p>The 'excellent' or 5 star option seems to be inflicted with outliers, because the mean is quite inflated as compared to the median (almost 4 times!)</p>
-            - <p>On the contrary, there is one poll where 100% of the people gave a 1 star</p>
-            - <p>Out of a 1000+ people present in the group, only ~100 people bother voting</p>
+            - <p>On the contrary, there is [[one poll]] where 100% of the people gave a 1 star</p>
+            - <p>Out of a 1000+ people present in the group, less than 100 people bother voting</p>
             
             """
             ,unsafe_allow_html=True)
 
 st.markdown("""
+            ---
             # Time Series
             While I have put the option to see the time series of any stat you wish, I will primarily analyze the number of votes per poll with respect to time.""",unsafe_allow_html=True)
 with st.expander(label="Select an option to see its variation (in %) over time", expanded=True):
 
     feature = st.selectbox(
         label=" ", options=['votes','score','excellent', 'good', 'okay', 'poor'])
-    fig = px.line(mess, x='date', y=f'{feature.lower()}', hover_data=['poor'],)
+    fig = px.line(mess, x='date', y=f'{feature.lower()}', hover_data=['poor'])
     fig.update_xaxes(
         dtick="M1",
         tickformat="%b",
-        rangeslider_visible=True)
+        rangeslider_visible=True,)
     fig.update_yaxes(title=f"% of {feature} ratings")
+    fig.update_traces(line_color='#57A6A1')
     st.plotly_chart(fig, use_container_width=True)   
 
 st.markdown("""
@@ -61,5 +63,6 @@ st.markdown("""
             - <p>A spike is observed when the even semester starts, and the polls are now being conducted much more frequently (the second group is created which consists of ALL the college students)</p>
             - <p>However, it gradually decreases as the semester goes on.</p>
             - <p>Another surge is seen in votes around April when the tender changes, as people are more eager to give feedback on the new menu.</p>
-            - <p>There are many tiny nuances that can be attributed to events like festivals, club activities and exam schedules, everything is interconnected!</p>""",unsafe_allow_html=True)
+            - <p>There are no votes in the second half of December, due to end sem holidays</p>""",unsafe_allow_html=True)
+st.info("""***Tasty Tidbits***\n\nThere are so many tiny nuances in this graph and each one can be attributed to some specific event like festivals, club activities, vacations and exam schedules... everything is interconnected!""",icon="🍒")
 # color='mess',color_discrete_sequence=px.colors.qualitative.G10,

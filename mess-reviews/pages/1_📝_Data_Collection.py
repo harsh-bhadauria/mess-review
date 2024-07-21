@@ -2,6 +2,7 @@ import streamlit as st
 from st_pages import add_page_title
 import pandas as pd
 from pathlib import Path
+from PIL import Image
 
 st.set_page_config(layout="wide",page_icon="📝",page_title="Data Collection")
 
@@ -13,6 +14,8 @@ p {
 </style>
 """, unsafe_allow_html=True)
 
+image_path = Path(__file__).parents[1] / 'images' / 'conversion.png'
+conversion = Image.open(image_path)
 
 st.title("📝 Data Collection")
 
@@ -29,7 +32,9 @@ st.markdown("""
             ---
             # Process
             As far as I know, there is no simple way to convert WhatsApp poll data into plain text. There's <a href="https://chromewebstore.google.com/detail/export-whatsapp-surveys/engdhlnghkdaoccckbbglafcanmpohob">this</a> chrome extension, but it only exports a single poll at a time. After a lot of searches that lead to no answers, I finally accepted the fact that I would have to type them manually... Yup. So I <em>manually typed 300+ samples</em> into an excel file and exported them as a csv file.
-            
+            """,unsafe_allow_html=True)
+st.image(conversion,use_column_width="auto")
+st.markdown("""
             ---
             # Result
             Finally, we have the following dataset:
@@ -38,4 +43,4 @@ st.markdown("""
 
 st.dataframe(mess,use_container_width=True)
 
-st.info("""***Tasty Tidbits***\n\nInitially I had thought of including a column for the dishes that was on the menu, but the menu keeps changing every couple months so there wasn't sufficient data to analyze each dish... I had to drop that idea :(""",icon="💡")
+st.info("""***Tasty Tidbits***\n\nInitially I had thought of including a column for the dishes that was on the menu, but the menu keeps changing every couple months so there wasn't sufficient data to analyze each dish... I had to drop that idea :(""",icon="🍒")

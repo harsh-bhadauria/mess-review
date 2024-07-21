@@ -26,7 +26,7 @@ st.markdown("""
             """,unsafe_allow_html=True)
 st.code("""mess.sort_values("score",ascending=False).loc[:,["date","score"]].head(10)""")
 
-st.dataframe(mess.sort_values("score",ascending=False).loc[:,["date","score","mess","meal"]].head(10),use_container_width=True)
+st.dataframe(mess.sort_values("score",ascending=False).loc[:,["date","score","mess","meal","day"]].head(10),use_container_width=True)
 
 st.markdown("""
             Two dates stand out in particlar: 28-01-2024 and 09-04-2024
@@ -50,4 +50,4 @@ image_path = Path(__file__).parents[1] / 'images' / '10th_april.png'
 food_bg = Image.open(image_path)
 st.image(food_bg,use_column_width="auto")
 
-st.markdown("""Although I personally have not eaten this legendary rasam (I was in Mess 1), I would like to ask someone what it was like...""")
+st.markdown("""Although I personally have not eaten this legendary rasam (I was in Mess 1), I would like to ask someone what it was like.""")
