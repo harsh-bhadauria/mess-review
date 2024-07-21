@@ -15,7 +15,7 @@ Some specific questions that I will try to analyse include (but are not limited 
 # Motivation
 For this project, I wanted to focus on a dataset that's relevant to me and for our college community. Instead of analyzing a random dataset off of the internet, I wanted to engage with something that reflects my daily experiences and offers actionable insights. After ~~a lot of~~ some brainstorming, I stumbled across polls that were conducted by the mess committee on WhatsApp and decided that this would be an interesting topic for analysis (just goes to show that data is <em>everywhere</em> around you, you just have to look closely 🙂).
 
----
+#
 Shoutout to [Summer of ML](https://github.com/bsoc-bitbyte/Summer_of_ML)! 🙇‍♂️
 
 A mess-ive thanks to the mess committee for conducting these polls, you guys are awesome. 💖
