@@ -1,5 +1,4 @@
 import streamlit as st
-from st_pages import add_page_title
 import pandas as pd
 from pathlib import Path
 from PIL import Image

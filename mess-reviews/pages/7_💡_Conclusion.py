@@ -20,10 +20,10 @@ st.markdown("""
             
             This project was meant for identifying the areas where we're lacking and then taking steps to counter those problems. By understanding patterns, we can make informed decisions to enhance our overall mess experience. I hope that the insights gained from this analysis are helpful, even if just a little bit.
             
-            The new tender may not have had the drastic impact we thought it would, but it was a step in the right direction. The increased poll frequency is a step in the right direction. Perhaps this project is a step in the right direction. And if there's anything that I've learned from Gradient Boost, its that taking tiny steps in the right direction will eventually lead you to your desired destination.
+            The new tender may not have had the drastic impact we thought it would, but it was a step in the right direction. The increased poll frequency is a step in the right direction. Perhaps this project is a step in the right direction. And if there's anything I've learned from Gradient Boost, its that taking tiny steps in the right direction will eventually lead you to your desired destination.
             
             ---
-            Shoutout to [[Summer of ML]]! 🙇‍♂️
+            Shoutout to <a href = "https://github.com/bsoc-bitbyte/Summer_of_ML">Summer of ML</a>! 🙇‍♂️
             
             A mess-ive thanks to the mess committee for conducting these polls, you guys are awesome. 💖
             """,unsafe_allow_html=True)

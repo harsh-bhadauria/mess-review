@@ -26,20 +26,6 @@ st.markdown("""
             
             """,unsafe_allow_html=True)
 
-# with st.expander(label="Select an option to see its variation (in %) over time", expanded=True):
-#     feature = st.selectbox(
-#         label=" ", options=['excellent', 'good', 'okay', 'poor','score','votes'])
-    
-#     fig = px.histogram(
-#         mess,x="meal",
-#         y=f"{feature}",
-#         color='mess',
-#         barmode="group",
-#         histfunc='avg',
-#         color_discrete_map={1:"#b84b77",2:"#63e0d8"})
-#     st.plotly_chart(fig, use_container_width=True)
-    
-
 
 with st.expander(label="Select an option to see its variation as the day and meal changes", expanded=True):
     feature = st.selectbox(
@@ -72,7 +58,7 @@ st.info("""***Tasty Tidbits***\n\nWhen looking at a graph, it is very important 
 st.markdown("""
             ---
             # Daily Graph
-            I'm including a daily plot which shows a quick summary of the stats of any specified date. Although it is not feasible to analyze every single day, this can be used to investigate outliers and I think its more of a QoL feature.
+            I'm including a daily plot which shows a quick summary of the stats of any specified date. Although it is not feasible to analyze every single day, this can be used to investigate outliers and I think its a nice QoL feature.
             """)
 
 with st.expander(label="Please select a date",expanded=True):
@@ -93,11 +79,12 @@ with st.expander(label="Please select a date",expanded=True):
             }
         
         st.dataframe(pd.DataFrame(data),use_container_width=True,hide_index=True)
+        
         values = date_ratings.drop(["score","votes"],axis=1).mean()
+        
         fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3)])
         fig.update_traces(hoverinfo='label+percent',marker=dict(colors = ['#00cecb','#7fb800','#ffbc42','d81159']))
         st.plotly_chart(fig, use_container_width=True)
-        #st.write(np.datetime64(date))
         
         st.dataframe(mess.loc[mess.date == np.datetime64(date),:].drop(["date","day"],axis=1),use_container_width=True)
         

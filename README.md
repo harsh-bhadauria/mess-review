@@ -4,7 +4,7 @@ Welcome to the ultimate deep dive into our college dining experience— analyzin
 
 ---
 # Expectations
- Some specific questions that I will try to analyse include (but are not limited to): 
+ Some specific questions that I will try to analyze include (but are not limited to): 
 
 - What is the overall quality of the mess food?
 - Which one out of Mess 1 and Mess 2 has a higher overall rating?
@@ -17,9 +17,5 @@ Welcome to the ultimate deep dive into our college dining experience— analyzin
 For this project, I wanted to focus on a dataset that's relevant to me and for our college community. Instead of analyzing a random dataset from the internet, I wanted to engage with something that reflects our daily experiences and offers actionable insights. After <del>a lot of</del> some brainstorming, I stumbled across polls that were conducted by the mess committee on WhatsApp (just goes to show that data is <em>everywhere</em> around you, you just have to look for it 🙂) and decided that this would be an interesting topic for analysis.
 
 ---
-# Quick Navigation
-- Where did I get the data from? <a href = "https://mess-review.streamlit.app/Data_Collection" target='_self'>here</a>
-- How did I calculate the overall score? <a href = "https://mess-review.streamlit.app/Data_Pre-Processing" target='_self'>here</a>
-- Impact of tender changes? <a href = "https://mess-review.streamlit.app/Mess_1_vs_Mess_2" target='_self'>here</a>
-- Want a day and time analysis? <a href = "https://mess-review.streamlit.app/Looking_At_The_Numbers" target='_self'>here</a>
-- Want to directly jump to the conclusion? <a href = "https://mess-review.streamlit.app/Conclusion" target='_self'>why?</a>
+Shoutout to <a href = "https://github.com/bsoc-bitbyte/Summer_of_ML">Summer of ML</a>! 🙇‍♂️
+A mess-ive thanks to the mess committee for conducting these polls, you guys are awesome. 💖

@@ -1,8 +1,5 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
-import plotly.express as px
-import plotly.figure_factory as ff
 from pathlib import Path
 from PIL import Image
 
@@ -24,14 +21,14 @@ st.markdown("""
             
             Let's start by looking at specific days where the ratings were highest and try to guess why that might be
             """,unsafe_allow_html=True)
-st.code("""mess.sort_values("score",ascending=False).loc[:,["date","score"]].head(10)""")
+st.code("""mess.sort_values("score",ascending=False).loc[:,["date","score","mess","meal","day"]].head(10)""")
 
 st.dataframe(mess.sort_values("score",ascending=False).loc[:,["date","score","mess","meal","day"]].head(10),use_container_width=True)
 
 st.markdown("""
-            Two dates stand out in particlar: 28-01-2024 and 09-04-2024
+            Two dates stand out in particular: 28-01-2024 and 09-04-2024
             - <p><b><em>28th January</em></b>: Pongalo Pongalo! This was the day that Pongal festivities took place in our college. The actual dates for Pongal were 15th January - 18th January, but due to a power shortage that lasted more than it should've, the celebrations were delayed. Anyhow, on this date there was a special lunch organized by the Telugu community and it is no surprise the score is 4.9, highest it has ever been. </p>
-            - <p><b><em>9th April</em></b>: Gudi Padwa and Ugadi. This date marked the beginning of a new year in the Hindu calendar celebrated in many states of India by different names. On this date too there was a special breakfast as well as a special lunch, organised by the Marathi and the Telugu communities respectively. The score is 4.8, and rightfully so.</p>
+            - <p><b><em>9th April</em></b>: Gudi Padwa and Ugadi. This date marked the beginning of a new year in the Hindu calendar celebrated in many states of India by different names. On this date too there was a special breakfast as well as a special lunch, organized by the Marathi and the Telugu communities respectively. The score is 4.8, and rightfully so.</p>
             
             """,unsafe_allow_html=True)
 st.markdown("Well well well... that was a pleasant trip down memory lane. Now let's look at the opposite side of the spectrum shall we?")
@@ -40,7 +37,7 @@ st.code("""mess.sort_values("score",ascending=False).loc[:,["date","score"]].hea
 st.dataframe(mess.sort_values("score").loc[:,["date","score","mess","meal"]].head(10),use_container_width=True)
 
 st.markdown("""
-            Although there's no explicit outlier here, there is still one thing which I was baffled to see. You might've guessed it, there is an entry which has a score of EXACTLY 1.
+            Although there's no explicit outlier here, there is still one thing which I was baffled to see. You might've guessed it, there is an entry which has a score of ***exactly 1***.
             
             ***The lunch of 10th April, 2024***
             

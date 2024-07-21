@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import plotly.express as px
-import plotly.figure_factory as ff
 from pathlib import Path
 
 st.set_page_config(layout="wide",page_icon="🔥",page_title="Mess 1 vs Mess 2")
@@ -37,7 +36,7 @@ with st.expander(label="Select an option to compare its distribution", expanded=
         hover_data=mess.columns,
         barmode="overlay",
         category_orders={"mess":[2,1]},
-        color_discrete_map={2:"#00cecb",1:"#d81159"})
+        color_discrete_map={2:"#00cecb",1:"palevioletred"})
     st.plotly_chart(fig, use_container_width=True)
 
 st.markdown("""
@@ -60,12 +59,12 @@ mess_2_polls = mess.loc[mess.mess == 2,:].shape[0]
 mess_1_polls,mess_2_polls""")
 st.write(mess_1_polls,mess_2_polls)
 
-st.info("""***Tasty Tidbits***\n\nRemember how the score distribution was positively skewed? That means if we randomly choose a point in our data, it is more likely to have a low score. Assuming any future polls will follow the same distibution, if you conduct a bunch more polls, the score is more likely to *decrease*. This is why possibly why Mess 1 has a higher score- *it has lesser number of polls*.""",icon="🍒")
+st.info("""***Tasty Tidbits***\n\nRemember how the score distribution was positively skewed? That means if we randomly choose a point in our data, it is more likely to have a low score. Assuming any future polls will follow the same distibution, if you conduct a bunch more polls, the score is more likely to *decrease*. This is possibly why Mess 1 has a higher score- *it has lesser number of polls*.""",icon="🍒")
 
 st.markdown("""
             ---
             # Tender Changes
-            From April 2024, a new tender was issued for the central mess and various stationary and grocery shops on the campus. Most importantly, non-veg items were now on the menu, being served in mess 2 ONLY (Previously, both mess had the same menu but served on alternate days). Will this drastic change have drastic consequences?
+            From April 2024, a new tender was issued for the central mess and various stationary and grocery shops on the campus. Most importantly, the whole mess menu changes, all the mess staff changes & non-veg items were now on the menu, being served in mess 2 ONLY (Previously, both mess had the same menu but served on alternate days). Will this drastic change have drastic consequences?
             """,unsafe_allow_html=True)
 
 mess['new_tender'] = (mess.date) < np.datetime64("2024-04-01")
@@ -78,7 +77,8 @@ with st.expander(label="Select an option to compare its distribution", expanded=
                        color="new_tender",
                        barmode="group",
                        histfunc='avg',
-                       color_discrete_sequence={False:"#7fb800",True:"#d81159"})
+                       color_discrete_sequence={False:"green",True:"red"},
+                       hover_data=[mess.mess])
     st.plotly_chart(fig, use_container_width=True)
 
 st.markdown("At first glance it seems promising, as the number of 5 star ratings did increase (not so much for mess 2 as one might expect). But once you look at the other categories and finally get to the score... its essentitally the same. Even after poll frequency skyrocketing after the new tender, even after the introduction on non-veg items... nothing changed.")

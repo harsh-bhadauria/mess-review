@@ -1,10 +1,6 @@
 import streamlit as st
-from st_pages import add_page_title, hide_pages
-import numpy as np
 import pandas as pd
 import plotly.express as px
-import plotly.figure_factory as ff
-from sklearn.preprocessing import RobustScaler
 from pathlib import Path
 
 st.set_page_config(layout="wide",page_icon="🌟",page_title="Adding a Score")
@@ -60,7 +56,7 @@ st.markdown("---\nNow if we take a look at this weighted average of ratings:")
 
 fig = px.histogram(mess.score,
                    color_discrete_sequence=['#57A6A1'])
-
+fig.update_traces(hovertemplate='Score: %{x} <br>Count: %{y}')
 fig.update_layout(
     xaxis_title="score",
     showlegend=False
